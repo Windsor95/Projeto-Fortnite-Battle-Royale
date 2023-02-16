@@ -1,0 +1,21 @@
+.btn-primary {
+  filter: drop-shadow(1rem 1rem 0 #be9506);
+
+  button {
+    width: 28rem;
+    height: 11rem;
+    clip-path: polygon(0 71%, 0 41%, 100% 32%, 100% 75%);
+    font-weight: 500;
+    font-size: 4.2rem;
+    line-height: 3.2rem;
+    text-transform: uppercase;
+    background-color: $brand-yellow;
+    color: $brand-blue;
+    padding: 10rem 1rem 11rem 1rem;
+    transform: rotate(-5deg);
+    transition: all 0.2s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

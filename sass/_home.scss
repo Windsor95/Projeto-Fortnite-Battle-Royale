@@ -1,0 +1,308 @@
+main {
+  .s-hero {
+    width: 100%;
+    background: url(../img/bg.png);
+    background-position: center;
+    background-size: cover;
+    height: 85rem;
+    z-index: -10;
+    .container {
+      position: relative;
+      display: flex;
+      .box-left-h {
+        width: 100%;
+        max-width: 63rem;
+        height: 43rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: calc(14rem + 8rem);
+        img {
+          margin-bottom: 3.5rem;
+        }
+        .btn-primary {
+          button {
+            a {
+              color: $brand-blue;
+            }
+          }
+        }
+      }
+      .box-right-h {
+        position: absolute;
+        top: 12rem;
+        right: 0;
+        img {
+          animation: floating 8s infinite;
+        }
+      }
+    }
+  }
+  .s-cards {
+    margin-top: 3.7rem;
+    .container {
+      display: flex;
+      .cards-left {
+        display: flex;
+        flex-direction: column;
+        gap: 1.1rem;
+        .card-l {
+          position: relative;
+          width: 100%;
+          max-width: 63rem;
+          height: 36.3rem;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            transition: all 0.3s ease-in-out;
+            &:hover {
+              transform: scale(1.4) rotate(-8deg);
+
+              filter: blur(3px);
+            }
+          }
+        }
+      }
+      .cards-right {
+        width: 63rem;
+        height: 75rem;
+        margin-left: 1.8rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        .card-r {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          max-width: 30rem;
+
+          .img-box {
+            width: 30rem;
+            height: 30rem;
+            overflow: hidden;
+            img {
+              transition: all 0.3s ease-in-out;
+              &:hover {
+                transform: scale(1.4) rotate(-8deg);
+              }
+            }
+          }
+
+          h3 {
+            margin-top: 1rem;
+            color: #4d4ae9;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 16px;
+            text-align: center;
+            strong {
+              color: $brand-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+  .s-skin {
+    margin-top: 2.7rem;
+    .container {
+      position: relative;
+      .top-s {
+        width: 100%;
+        background-color: $brand-yellow;
+        color: $brand-blue;
+        padding: 2rem 0;
+        text-align: center;
+        h2 {
+          font-size: 5rem;
+        }
+      }
+      .mid-s {
+        margin-top: 1.4rem;
+        color: $brand-blue;
+        text-align: center;
+        p {
+          font-size: 1.6rem;
+        }
+        .social-s {
+          margin: 1.1rem 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 2rem;
+          img {
+            transition: all 0.3s ease;
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+      .x-s {
+        width: 100%;
+        height: 30rem;
+        background: $brand-gradient;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        margin-top: 1.5rem;
+        /*img {
+          &:hover {
+            transform: rotate(45deg);
+          }
+        }*/
+      }
+      .skin-01 {
+        position: absolute;
+        left: 2rem;
+        top: 1rem;
+        animation: floating 7s infinite;
+      }
+      .skin-02 {
+        position: absolute;
+        right: 2rem;
+        top: 1rem;
+        animation: floating 8s infinite;
+      }
+      .detalhes-s01 {
+        position: relative;
+        z-index: 10;
+        margin-top: 2.5rem;
+        display: flex;
+        justify-content: space-between;
+        .skins-box {
+          width: 100%;
+          max-width: 50rem;
+          .nome-s01 {
+            width: 100%;
+            max-width: 50rem;
+            height: 5.4rem;
+            background-color: $brand-yellow;
+            text-align: center;
+            h2 {
+              color: $brand-blue;
+            }
+          }
+          .dados-s01 {
+            width: 100%;
+            max-width: 50rem;
+            height: 20rem;
+            background: $brand-gradient;
+            overflow: hidden;
+            .info-s01 {
+              width: 100%;
+              max-width: 46rem;
+              display: flex;
+              flex-direction: column;
+              margin: 2rem;
+              gap: 2.5rem;
+              &:last-child {
+                border-bottom: 1.8rem solid $brand-yellow;
+              }
+              h3 {
+                color: $brand-white;
+                font-weight: normal;
+                font-size: 3.2rem;
+                line-height: 32px;
+                &:last-child {
+                  margin-bottom: 1.9rem;
+                }
+                span {
+                  color: $brand-yellow;
+                }
+              }
+            }
+          }
+        }
+      }
+      .vote-skin {
+        width: 100%;
+        max-width: 38rem;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        left: 44rem;
+        bottom: 20.4rem;
+        .btn-skin {
+          width: 12rem;
+          height: 12rem;
+          background: $brand-yellow;
+          border-radius: 50%;
+          border: 0.6rem solid $brand-white;
+          color: $brand-blue;
+          font-size: 3.2rem;
+          box-shadow: 1px -1px 20px -11px #000000;
+          transition: all 0.2s ease-in-out;
+          &:first-child:hover {
+            transform: scale(1.02) rotate(-45deg);
+            background: $brand-gradient;
+            color: $brand-white;
+          }
+          &:last-child:hover {
+            transform: scale(1.02) rotate(45deg);
+            background: $brand-gradient;
+            color: $brand-white;
+          }
+        }
+      }
+    }
+  }
+  .s-gameplay {
+    margin-top: 3.7rem;
+    .bg-gp {
+      width: 100%;
+      height: 85rem;
+      background: url(../img/bg-gp.png) no-repeat center center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 8rem;
+      .info-gp {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2 {
+          font-weight: 500;
+          font-size: 6.4rem;
+          line-height: 6.4rem;
+          text-align: center;
+          color: $brand-white;
+          margin: 4rem;
+          span {
+            color: $brand-yellow;
+          }
+        }
+        .patri {
+          border: 5px solid $brand-white;
+          border-radius: 2rem;
+        }
+      }
+      .btn-primary {
+        button {
+          a {
+            color: #07055b;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

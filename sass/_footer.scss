@@ -1,0 +1,107 @@
+footer {
+  background: $brand-gradient;
+  padding-bottom: 6rem;
+  .top-f {
+    z-index: 15;
+    width: 100%;
+    height: 9.9rem;
+    background-color: $brand-yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    .btn-primary {
+      filter: none;
+      button {
+        width: 100%;
+        max-width: 66rem;
+        font-size: 3rem;
+        background-color: $brand-blue;
+        color: $brand-yellow;
+        clip-path: polygon(0 65%, 0 45%, 100% 40%, 100% 70%);
+        transform: none;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.02);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.329);
+        }
+      }
+    }
+  }
+  .container {
+    margin-top: 6rem;
+    .botton-f {
+      display: flex;
+      height: 35rem;
+      .botton-left {
+        border-right: 2px solid #ffffff;
+        width: 100%;
+        max-width: 77.2rem;
+
+        margin-top: 10px;
+        padding-right: 4rem;
+
+        .top-left-f {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 7.7rem;
+
+          .logo-f {
+            display: flex;
+            gap: 3rem;
+          }
+          .social-f {
+            display: flex;
+            gap: 2rem;
+            img {
+              height: 2.2rem;
+              transition: opacity 0.3s;
+              &:hover {
+                opacity: 60%;
+              }
+            }
+          }
+        }
+        .mid-f {
+          display: flex;
+          justify-content: flex-start;
+          gap: 11.7rem;
+          ul {
+            li {
+              &:not(:last-child) {
+                margin-bottom: 1rem;
+              }
+              a {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: normal;
+                font-size: 1.2rem;
+                line-height: 15px;
+                text-transform: uppercase;
+                color: $brand-white;
+                transition: opacity 0.3s;
+                &:hover {
+                  opacity: 60%;
+                }
+              }
+            }
+          }
+        }
+        .dir-f {
+          margin-top: 7.2rem;
+          padding-bottom: 3rem;
+          p {
+            font-family: Arial, Helvetica, sans-serif;
+            color: $brand-white;
+            font-size: 1.2rem;
+          }
+        }
+      }
+      .botton-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 4rem;
+      }
+    }
+  }
+}
