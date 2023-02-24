@@ -13,7 +13,6 @@ header {
       align-items: center;
       justify-content: space-between;
       padding: 3rem 0;
-      border-bottom: 1.5px solid rgba(255, 255, 255, 0.2);
       .logo-h {
         display: flex;
         gap: 3rem;
@@ -26,18 +25,108 @@ header {
           li {
             font-size: 1.6rem;
             a {
-              font-family: "Inter", sans-serif;
+              font-family: 'Inter', sans-serif;
               font-weight: 600;
               font-size: 1.6rem;
               line-height: 1.9rem;
               color: $brand-white;
               transition: color 0.3s;
+              &.active {
+                color: $brand-yellow;
+              }
               &:hover {
                 color: $brand-yellow;
               }
             }
           }
         }
+      }
+    }
+    .icon-mobile {
+      display: none;
+    }
+  }
+  @include responsive(950px) {
+    .container {
+      .box-h {
+        .logo-h {
+          width: 100%;
+          max-width: 20%;
+        }
+        nav {
+          ul {
+            display: flex;
+            gap: 3rem;
+
+            li {
+              a {
+                font-size: 1.3rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include responsive(750px) {
+    .container {
+      .box-h {
+        .logo-h {
+          width: 100%;
+          max-width: 20%;
+        }
+        nav {
+          ul {
+            display: flex;
+            gap: 3rem;
+
+            li {
+              a {
+                font-size: 1.1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include responsive(680px) {
+    .container {
+      .box-h {
+        .logo-h {
+          width: 100%;
+          min-width: 40%;
+        }
+        nav {
+          display: none;
+          ul {
+            display: flex;
+            gap: 3rem;
+
+            li {
+              a {
+                font-size: 1.1rem;
+              }
+            }
+          }
+        }
+      }
+      .icon-mobile {
+        display: block;
+      }
+    }
+  }
+}
+
+@include responsive(480px) {
+  header {
+    height: 6rem;
+    .container {
+      .box-h {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 0;
       }
     }
   }
@@ -62,15 +151,57 @@ header {
     ul {
       display: flex;
       justify-content: center;
-      gap: 3rem;
+      align-items: center;
+
       font-size: 1.6rem;
       padding: 1.2rem;
+      .img-modos {
+        background: url(../img/bg-gp.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        margin-right: 0.5rem;
+        transition: transform 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+      .img-modos.zero {
+        background: url(../img/zerowar.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .img-modos.criativo {
+        background: url(../img/criativo.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .img-modos.salve {
+        background: url(../img/salveomundo.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
       li {
+        opacity: 80%;
+        transition: transform 0.3s ease;
+        &:hover {
+          opacity: 100%;
+          transform: translateX(3px);
+        }
+        &:not(:last-child) {
+          margin-right: 3rem;
+        }
+
         a {
-          color: $brand-blue;
-          &:hover {
-            color: #5754fe;
-          }
+          color: rgb(26, 7, 133);
         }
       }
     }

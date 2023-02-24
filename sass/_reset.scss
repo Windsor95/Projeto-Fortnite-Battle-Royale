@@ -6,7 +6,12 @@
   outline: none;
   border: none;
   box-sizing: border-box;
-  font-family: Impact;
+  font-family: 'Burbank';
+}
+
+@font-face {
+  font-family: 'Burbank';
+  src: url(../fonts/Burbank.otf);
 }
 
 img {
