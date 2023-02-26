@@ -12,29 +12,44 @@ function modalOpen(ev) {
   modalModos.classList.add('active');
 }
 
+modalModos.addEventListener('mouseenter', modalOpen);
+
 function modalClose(ev) {
   menuMod.classList.remove('active');
   modalModos.classList.remove('active');
 }
+
+menuMod.addEventListener('mouseleave', modalClose);
 
 function setText(ev) {
   ev.preventDefault();
   let txtBox = document.querySelector('.js-text-card');
   txtBox.classList.toggle('active');
 }
+
+cardLeft.addEventListener('mouseenter', setText);
+cardLeft.addEventListener('mouseleave', setText);
+
 function setText2(ev) {
   ev.preventDefault();
   let txtBox2 = document.querySelector('.js-text-card2');
   txtBox2.classList.toggle('active');
 }
 
+cardLeft2.addEventListener('mouseenter', setText2);
+cardLeft2.addEventListener('mouseleave', setText2);
+
 function setImage(ev) {
   imgHeader.src = './img/eterno.png';
 }
 
+imgHeader.addEventListener('mouseenter', setImage);
+
 function setImageA(ev) {
   imgHeader.src = './img/armadura.png';
 }
+
+imgHeader.addEventListener('mouseleave', setImageA);
 
 function alertVota(ev) {
   ev.preventDefault();
@@ -55,6 +70,9 @@ function alertVota(ev) {
     }
   });
 }
+
+btnSkin.addEventListener('click', alertVota);
+
 function alertVota2(ev) {
   ev.preventDefault();
 
@@ -75,13 +93,4 @@ function alertVota2(ev) {
   });
 }
 
-menuMod.addEventListener('mouseleave', modalClose);
-modalModos.addEventListener('mouseenter', modalOpen);
-imgHeader.addEventListener('mouseenter', setImage);
-imgHeader.addEventListener('mouseleave', setImageA);
-cardLeft.addEventListener('mouseenter', setText);
-cardLeft.addEventListener('mouseleave', setText);
-cardLeft2.addEventListener('mouseenter', setText2);
-cardLeft2.addEventListener('mouseleave', setText2);
-btnSkin.addEventListener('click', alertVota);
 btnSkin2.addEventListener('click', alertVota2);
